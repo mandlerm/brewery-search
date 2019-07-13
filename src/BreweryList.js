@@ -6,6 +6,10 @@ class BreweryList extends React.Component {
     return (
       <div className="brewery-list">
         <h1>List of breweries</h1>
+        <h3>Name</h3>
+        <p>Type</p>
+        <p>Address</p>
+        <a href="/">URL</a>
       </div>
     );
   }

@@ -23,6 +23,8 @@
 }
 
 /* SEGMENT COMPONENT */
-.brewery-card {
+.card-wrap {
   background-color: honeydew;
+  text-align: center;
+  align-content: center;
 }

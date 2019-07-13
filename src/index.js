@@ -4,7 +4,8 @@ import Welcome from './Welcome';
 import Search from './Search';
 import './css/style.css';
 import BreweryList from './BreweryList';
-import Segment from './BreweryCard';
+import BreweryCard from './BreweryCard';
+import CardWrap from './CardWrap';
 
 class App extends React.Component {
   render() {
@@ -12,9 +13,9 @@ class App extends React.Component {
       <div>
         <Welcome />
         <Search />
-        <BreweryCard>
+        <CardWrap>
           <BreweryList />
-        </BreweryCard>
+        </CardWrap>
       </div>
     );
   }
