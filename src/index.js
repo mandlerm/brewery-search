@@ -4,7 +4,7 @@ import Welcome from './Welcome';
 import Search from './Search';
 import './css/style.css';
 import BreweryList from './BreweryList';
-import BreweryCard from './BreweryCard';
+import BreweryCard from './Brewery';
 import CardWrap from './CardWrap';
 
 class App extends React.Component {
@@ -13,9 +13,6 @@ class App extends React.Component {
       <div>
         <Welcome />
         <Search />
-        <CardWrap>
-          <BreweryList />
-        </CardWrap>
       </div>
     );
   }

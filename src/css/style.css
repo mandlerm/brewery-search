@@ -11,15 +11,15 @@
 .search {
 }
 
-/* BREWERY LIST COMPONENT  */
+/* BREWERY COMPONENT  */
 
-.brewery-list {
+.brewery {
   text-align: center;
 }
 
 /* INDIVIDUAL BREWERY DISPLAY COMPONENT */
 
-.list-item {
+.brewery-list {
 }
 
 /* SEGMENT COMPONENT */
