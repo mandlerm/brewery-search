@@ -12,35 +12,26 @@
 
 /* SEARCH COMPONENT */
 
+.search.ui.container {
+  display: flex;
+  margin-top: 20px;
+}
+
 .search.ui.container button {
   margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.button.search-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ui.form select {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-.brewery {
-  text-align: center;
+  /* display: flex; */
 }
 
 /* STATE SELECTOR COMPONENT */
 .stateSelector {
   display: flex;
-  align-items: center;
   width: 50%;
-  /* width: 100vw; */
+  margin-left: 25px;
+}
+
+.form {
+  display: flex;
+  align-self: center;
 }
 
 /* INDIVIDUAL BREWERY DISPLAY COMPONENT */
