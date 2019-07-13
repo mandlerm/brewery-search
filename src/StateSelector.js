@@ -1,7 +1,8 @@
 import React from 'react';
+import './css/style.css';
 
 const StateSelector = () => (
-  <div className="ui form">
+  <div className="ui form stateSelector">
     <div className="field">
       <label id="state-selector" htmlFor="state-selector">
         State

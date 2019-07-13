@@ -7,7 +7,9 @@ class Search extends React.Component {
     return (
       <div className="search">
         <StateSelector />
-        <button>Show me the brewery!</button>
+        <button className="ui primary button search-button" type="submit">
+          Show me the brewery!
+        </button>
       </div>
     );
   }
