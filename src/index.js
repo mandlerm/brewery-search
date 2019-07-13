@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Welcome from './Welcome';
 import Search from './Search';
+import './css/style.css';
+import BreweryList from './BreweryList';
 
 class App extends React.Component {
   render() {
@@ -9,6 +11,7 @@ class App extends React.Component {
       <div>
         <Welcome />
         <Search />
+        <BreweryList />
       </div>
     );
   }

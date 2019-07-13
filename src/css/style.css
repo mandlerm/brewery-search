@@ -3,6 +3,7 @@
 /* WELCOME COMPONENT */
 
 .welcome {
+  text-align: center;
 }
 
 /* SEARHC COMPONENT */
@@ -13,6 +14,7 @@
 /* BREWERY LIST COMPONENT  */
 
 .brewery-list {
+  text-align: center;
 }
 
 /* INDIVIDUAL BREWERY DISPLAY COMPONENT */
