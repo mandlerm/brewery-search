@@ -34,6 +34,10 @@
 .brewery-list {
 }
 
+.tab-left {
+  margin-left: 10px;
+}
+
 /* SEGMENT COMPONENT */
 .card-wrap {
   background-color: honeydew;

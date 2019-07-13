@@ -4,6 +4,7 @@ import axios from 'axios';
 import Welcome from './Welcome';
 import SearchBar from './SearchBar';
 import '../css/style.css';
+import BreweryList from './BreweryList';
 
 class App extends React.Component {
   state = { brewery_listings: [] };
@@ -26,7 +27,7 @@ class App extends React.Component {
           button_message="Show me some breweries!"
           onSubmit={this.onSearchSubmit}
         />
-        Found: {this.state.brewery_listings.length} breweries
+        <BreweryList brewList={this.state.brewery_listings} />
       </div>
     );
   }
