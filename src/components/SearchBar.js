@@ -6,7 +6,9 @@ class SearchBar extends React.Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state.location);
+    if (this.state.location !== '') {
+      this.props.onSubmit(this.state.location);
+    }
   };
 
   render() {
@@ -18,11 +20,14 @@ class SearchBar extends React.Component {
               <select
                 className="ui search dropdown"
                 onChange={e => {
+                  console.log(`target is${e.target.value}`);
                   this.setState({ location: e.target.value });
                 }}
                 value={this.state.location}
               >
-                <option value="">Choose a state</option>
+                <option value="" default>
+                  Choose a state
+                </option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
                 <option value="Arizona">Arizona</option>

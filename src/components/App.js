@@ -3,15 +3,16 @@ import axios from 'axios';
 import Welcome from './Welcome';
 import SearchBar from './SearchBar';
 import '../css/style.css';
-import BreweryList from './BreweryList';
-import BreweryCard from './Brewery';
-import CardWrap from './CardWrap';
 
 class App extends React.Component {
   onSearchSubmit(location) {
-    axios.get(`https://api.openbrewerydb.org/breweries`, {
-      params: { by_state: location },
-    });
+    axios
+      .get(`https://api.openbrewerydb.org/breweries`, {
+        params: { by_state: location },
+      })
+      .then(response => {
+        console.log(response.data);
+      });
   }
 
   render() {
