@@ -1,8 +1,8 @@
 import React from 'react';
 import StateSelector from './StateSelector';
-import './css/style.css';
+import '../css/style.css';
 
-class Search extends React.Component {
+class SearchBar extends React.Component {
   render() {
     return (
       <div className="search">
@@ -15,4 +15,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default SearchBar;
