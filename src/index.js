@@ -4,7 +4,7 @@ import Welcome from './Welcome';
 import Search from './Search';
 import './css/style.css';
 import BreweryList from './BreweryList';
-import Segment from './Segment';
+import Segment from './BreweryCard';
 
 class App extends React.Component {
   render() {
@@ -12,9 +12,9 @@ class App extends React.Component {
       <div>
         <Welcome />
         <Search />
-        <Segment>
+        <BreweryCard>
           <BreweryList />
-        </Segment>
+        </BreweryCard>
       </div>
     );
   }
