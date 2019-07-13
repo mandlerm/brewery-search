@@ -6,15 +6,19 @@
   text-align: center;
 }
 
+.beer {
+  color: brown;
+}
+
 /* SEARCH COMPONENT */
 
 .search {
-  align-content: center;
-  padding: 40px;
 }
-.search button {
-  padding-left: 50px;
-  align-content: center;
+
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brewery {
@@ -23,9 +27,11 @@
 
 /* STATE SELECTOR COMPONENT */
 .stateSelector {
-  align-content: center;
-  align-self: center;
-  width: 75%;
+  display: flex;
+  justify-content: left;
+  padding-left: 25%;
+  align-items: center;
+  width: 100vw;
 }
 
 /* INDIVIDUAL BREWERY DISPLAY COMPONENT */
