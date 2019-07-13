@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Welcome from './Welcome';
 import SearchBar from './SearchBar';
 import '../css/style.css';
@@ -8,7 +9,9 @@ import CardWrap from './CardWrap';
 
 class App extends React.Component {
   onSearchSubmit(location) {
-    console.log(location);
+    axios.get(`https://api.openbrewerydb.org/breweries`, {
+      params: { by_state: location },
+    });
   }
 
   render() {
