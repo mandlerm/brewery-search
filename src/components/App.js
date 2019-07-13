@@ -7,8 +7,8 @@ import BreweryCard from './Brewery';
 import CardWrap from './CardWrap';
 
 class App extends React.Component {
-  onSearchSubmit(term) {
-    console.log(term);
+  onSearchSubmit(location) {
+    console.log(location);
   }
 
   render() {

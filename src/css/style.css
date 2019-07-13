@@ -14,19 +14,13 @@
 
 .search.ui.container {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .search.ui.container button {
   margin-top: 10px;
   /* display: flex; */
-}
-
-/* STATE SELECTOR COMPONENT */
-.stateSelector {
-  display: flex;
-  width: 50%;
-  margin-left: 25px;
 }
 
 .form {

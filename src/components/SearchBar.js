@@ -6,13 +6,13 @@ class SearchBar extends React.Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    console.log(this.state.location);
+    this.props.onSubmit(this.state.location);
   };
 
   render() {
     return (
       <div className="search ui container">
-        <div className="stateSelector ui segment">
+        <div className="searchBar ui segment">
           <form onSubmit={this.onFormSubmit}>
             <div className="ui form">
               <select
@@ -81,7 +81,6 @@ class SearchBar extends React.Component {
             </button>
           </form>
         </div>
-        );
       </div>
     );
   }
