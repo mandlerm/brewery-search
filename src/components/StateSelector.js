@@ -2,15 +2,23 @@ import React from 'react';
 import '../css/style.css';
 
 class StateSelector extends React.Component {
-  onInputChange(event) {
-    console.log(event.target.value);
+  state = { location: '' };
+
+  componentDidUpdate() {
+    console.log(this.state.location);
   }
 
   render() {
     return (
       <div className="stateSelector ui container">
         <div className="ui form">
-          <select className="ui search dropdown" onChange={this.onInputChange}>
+          <select
+            className="ui search dropdown"
+            onChange={e => {
+              this.setState({ location: e.target.value });
+            }}
+            value={this.state.location}
+          >
             <option value="">State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -69,5 +77,4 @@ class StateSelector extends React.Component {
     );
   }
 }
-
 export default StateSelector;
