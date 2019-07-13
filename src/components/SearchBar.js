@@ -5,7 +5,7 @@ import '../css/style.css';
 class SearchBar extends React.Component {
   render() {
     return (
-      <div className="search">
+      <div className="search ui container">
         <StateSelector />
         <button className="ui primary button search-button" type="submit">
           Show me the brewery!
