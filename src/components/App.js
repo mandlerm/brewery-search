@@ -7,11 +7,18 @@ import BreweryCard from './Brewery';
 import CardWrap from './CardWrap';
 
 class App extends React.Component {
+  onSearchSubmit(term) {
+    console.log(term);
+  }
+
   render() {
     return (
       <div>
         <Welcome />
-        <SearchBar />
+        <SearchBar
+          button_message="Show me some breweries!"
+          onSubmit={this.onSearchSubmit}
+        />
       </div>
     );
   }
