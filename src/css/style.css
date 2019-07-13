@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .search.ui.container button {
@@ -31,11 +32,12 @@
 
 /* INDIVIDUAL BREWERY DISPLAY COMPONENT */
 
-.brewery-list {
+.brewery-card {
+  /* background-color: gainsboro; */
 }
 
 .tab-left {
-  margin-left: 10px;
+  margin-left: 23px;
 }
 
 /* SEGMENT COMPONENT */
