@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Search from './Search';
 import './css/style.css';
 import BreweryList from './BreweryList';
+import Segment from './Segment';
 
 class App extends React.Component {
   render() {
@@ -11,7 +12,9 @@ class App extends React.Component {
       <div>
         <Welcome />
         <Search />
-        <BreweryList />
+        <Segment>
+          <BreweryList />
+        </Segment>
       </div>
     );
   }
