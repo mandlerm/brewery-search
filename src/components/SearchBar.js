@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
                 }}
                 value={this.state.location}
               >
-                <option value="">{this.state.location}</option>
+                <option value="">Choose a state</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
