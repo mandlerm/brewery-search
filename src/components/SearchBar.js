@@ -20,7 +20,6 @@ class SearchBar extends React.Component {
               <select
                 className="ui search dropdown"
                 onChange={e => {
-                  console.log(`target is${e.target.value}`);
                   this.setState({ location: e.target.value });
                 }}
                 value={this.state.location}

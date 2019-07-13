@@ -5,14 +5,14 @@ import SearchBar from './SearchBar';
 import '../css/style.css';
 
 class App extends React.Component {
-  onSearchSubmit(location) {
-    axios
-      .get(`https://api.openbrewerydb.org/breweries`, {
+  async onSearchSubmit(location) {
+    const response = await axios.get(
+      `https://api.openbrewerydb.org/breweries`,
+      {
         params: { by_state: location },
-      })
-      .then(response => {
-        console.log(response.data);
-      });
+      }
+    );
+    console.log(response.data);
   }
 
   render() {
