@@ -4,14 +4,12 @@ import ListItem from './ListItem';
 
 class BreweryList extends React.Component {
   onClickBrewer = id => {
-    //  use id to fetch the element of brewList with that id
-    // send that card into as props to ShowBrewery
-    // React router
-    console.log(
-      this.props.brewList.find(function(b) {
-        return b.id === id.id;
-      })
-    );
+    const listItem = this.props.brewList.find(function(b) {
+      return b.id === id.id;
+    });
+
+    console.log(listItem);
+    // this.props.history.push(`/ShowBrewery/`);
   };
 
   render() {

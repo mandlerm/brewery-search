@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GoogleMapReact from 'google-map-react';
+// import LocationMap from './LocationMap';
 import NavButton from './NavButton';
 import '../css/style.css';
 

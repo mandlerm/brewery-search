@@ -27,3 +27,7 @@
 .fullList {
   justify-content: left;
 }
+
+.list.raised {
+  background-color: palegoldenrod;
+}

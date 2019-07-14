@@ -17,6 +17,8 @@ class App extends React.Component {
       }
     );
     this.setState({ brewery_listings: response.data });
+    console.log(this.state);
+    this.props.history.push(`/BreweryList/${location}`);
   };
 
   render() {
