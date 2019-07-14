@@ -10,7 +10,7 @@ const mapStyles = {
   height: '25%',
 };
 
-export class LocationMap extends React.Component {
+class LocationMap extends React.Component {
   render() {
     const { latitude, longitude } = this.props;
 

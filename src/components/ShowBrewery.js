@@ -46,7 +46,7 @@ class ShowBrewery extends React.Component {
           <div className="item">
             <i className="linkify icon"></i>
             <div className="content">
-              <a href={website_url} target="_blank">
+              <a href={website_url} target="_blank" rel="noopener noreferrer">
                 {website_url}
               </a>
             </div>
