@@ -13,6 +13,7 @@ class App extends React.Component {
   };
 
   onSearchSubmit = async location => {
+    console.log(location);
     const response = await axios.get(
       `https://api.openbrewerydb.org/breweries`,
       {

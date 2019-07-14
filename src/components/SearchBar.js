@@ -6,7 +6,7 @@ class SearchBar extends React.Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    if (this.state.location !== '') {
+    if (this.state.location !== 'Choose a state') {
       this.props.onSubmit(this.state.location);
     }
   };
