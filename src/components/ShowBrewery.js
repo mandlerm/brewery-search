@@ -19,7 +19,7 @@ class ShowBrewery extends React.Component {
       longitude,
     } = this.props.location.state.chosen_brewery;
 
-    console.log(this.props);
+    console.log(latitude, longitude);
     return (
       <div className="breweryPage">
         <NavButton
