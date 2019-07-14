@@ -1,6 +1,6 @@
 .list-item {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
   grid-gap: 20px;
 }
 
@@ -9,6 +9,7 @@
   height: 100%;
   margin: 10px;
   padding-top: 10px;
+  /* justify-content: center; */
 }
 
 .content {
@@ -20,7 +21,7 @@
 }
 
 .fullList {
-  justify-content: left;
+  /* justify-content: left; */
 }
 
 .list.raised {
