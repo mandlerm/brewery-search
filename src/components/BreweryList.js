@@ -13,7 +13,7 @@ class BreweryList extends React.Component {
 
   render() {
     return (
-      <div className="fullList">
+      <div className="fullList list-item">
         {this.props.brewList.map(brewer => (
           <ListItem
             key={brewer.id}
