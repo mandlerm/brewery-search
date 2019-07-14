@@ -1,15 +1,17 @@
 import React from 'react';
 import '../css/style.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import App from './App';
 import ShowBrewery from './ShowBrewery';
 import Error from './Error';
+import BreweryList from './BreweryList';
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
-      <Route path="/brewery/:name" component={ShowBrewery} />
+      <Route path="/BreweryList/:state" component={BreweryList} />
+      <Route path="/BreweryShow/" component={ShowBrewery} />
       <Route component={Error} />
     </Switch>
   </BrowserRouter>
