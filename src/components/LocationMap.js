@@ -12,11 +12,12 @@ class LocationMap extends React.Component {
       height: '300px',
     };
     return (
-      <div className="map">
-        Hello World
+      <div className="map ui medium rounded image ">
+        Come visit us!
         <Map
           google={this.props.google}
           zoom={7}
+          style={style}
           initialCenter={{
             lat: latInt,
             lng: lonInt,
@@ -28,7 +29,7 @@ class LocationMap extends React.Component {
 }
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyDddt2gDTwM_89T1dozM4hE0KHvahINGsY',
-  version: 3.31,
+  version: 3.37,
 })(LocationMap);
 
 // import React from 'react';

@@ -33,32 +33,38 @@
 /*  BREWERY DISPLAY */
 
 .displayCard {
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
+.card {
+  display: flex;
+  justify-content: center;
+}
 .raised.list.record {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+
   margin-top: 20px;
-  margin-left: 70px;
-  margin-bottom: 50px;
+  /* margin-left: 70px; */
+  margin-bottom: 20px;
   padding: 20px;
   align-items: center;
   text-align: center;
-  justify-content: center;
+
   background-color: salmon;
   color: darkslateblue;
   width: 75%;
 }
 
 .heading {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
   color: grey;
 }
 
 .map {
   display: flex;
+  justify-content: center;
 }
 /*  NAVBUTTON */
 
