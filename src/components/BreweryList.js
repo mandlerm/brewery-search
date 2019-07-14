@@ -13,9 +13,13 @@ class BreweryList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="fullList">
         {this.props.brewList.map(brewer => (
-          <ListItem brew={brewer} />
+          <ListItem
+            key={brewer.id}
+            brew={brewer}
+            onClick={this.onClickBrewer}
+          />
         ))}
       </div>
     );

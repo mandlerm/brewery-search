@@ -1,0 +1,21 @@
+.list-item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-auto-rows: 2em;
+  grid-gap: 0.5em; */
+  /* grid-template-columns: repeat(2, minmax(300px, 1fr)); */
+  grid-gap: 50px;
+}
+
+.raised.segment {
+  background-color: lightsteelblue;
+}
+
+.list-item span {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-left {
+  margin-left: 23px;
+}

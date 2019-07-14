@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../css/listItem.css';
+
 class ListItem extends React.Component {
   render() {
     const {
@@ -14,12 +16,11 @@ class ListItem extends React.Component {
     } = this.props.brew;
 
     return (
-      <span
-        onClick={() => this.onClickBrewer({ id })}
-        className="list-item"
-        key={id}
-      >
-        <div className="ui list raised segment">
+      <span className="list-item">
+        <div
+          onMouseDown={() => this.props.onClick({ id })}
+          className="ui list raised segment"
+        >
           <div className="item">
             <div className="content">
               <h1>{name}</h1>
@@ -45,15 +46,6 @@ class ListItem extends React.Component {
               <a href={website_url}>{website_url}</a>
             </div>
           </div>
-
-          <button
-            onClick={this.onClickBrewer.bind(this, { id })}
-            type="button"
-            className="ui right labeled icon button more"
-          >
-            <i className="right arrow icon"></i>
-            See more info
-          </button>
         </div>
       </span>
     );
