@@ -5,7 +5,8 @@
 }
 
 .raised.segment {
-  background-color: lightsteelblue;
+  /* background-color: lightsteelblue; */
+  /* align-content: left; */
 }
 
 .list-item span {
@@ -15,6 +16,14 @@
   padding-top: 10px;
 }
 
+.content {
+  text-align: left;
+}
+
 .tab-left {
   margin-left: 23px;
+}
+
+.fullList {
+  justify-content: left;
 }

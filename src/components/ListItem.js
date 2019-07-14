@@ -19,7 +19,7 @@ class ListItem extends React.Component {
       <span className="list-item">
         <div
           onMouseDown={() => this.props.onClick({ id })}
-          className="ui list raised segment"
+          className="ui list raised segment button"
         >
           <div className="item">
             <div className="content">
