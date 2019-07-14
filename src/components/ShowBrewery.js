@@ -28,25 +28,28 @@ class ShowBrewery extends React.Component {
         <div className="card">
           <div className="ui raised list segment record ">
             <div className="item">
-              <div className="content">
-                <h1>{name}</h1>
+              <div className="content brewName ">
+                <h1 className="name">{name}</h1>
               </div>
             </div>
-
-            <div className="item">
-              <i className="marker icon"></i>
-              <div className="content">{street}</div>
-              <div className="content tab-left">
-                {city}, {state} {postal_code}
+            <div className="breweryInfo">
+              <div className="item">
+                <div className="content">{street}</div>
+                <div className="content">
+                  {city}, {state} {postal_code}
+                </div>
               </div>
-            </div>
 
-            <div className="item">
-              <i className="linkify icon"></i>
-              <div className="content">
-                <a href={website_url} target="_blank" rel="noopener noreferrer">
-                  {website_url}
-                </a>
+              <div className="item">
+                <div className="content">
+                  <a
+                    href={website_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {website_url}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

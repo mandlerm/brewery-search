@@ -42,18 +42,33 @@
 }
 .raised.list.record {
   display: flex;
-  justify-content: center;
-
+  /* justify-content: left; */
   margin-top: 20px;
-  /* margin-left: 70px; */
   margin-bottom: 20px;
-  padding: 20px;
   align-items: center;
   text-align: center;
-
   background-color: salmon;
   color: darkslateblue;
   width: 75%;
+}
+
+.name {
+  font-size: 4em;
+  margin: 0;
+}
+
+.brewName {
+  display: flex;
+  justify-content: left;
+  margin-right: 20px;
+}
+
+.breweryInfo {
+  display: flex;
+  justify-content: right;
+  flex-flow: column;
+  margin-left: 20px;
+  /* text-align: center; */
 }
 
 .heading {
