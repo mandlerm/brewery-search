@@ -9,7 +9,10 @@ const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
-      <Route path="/BreweryList/:state" component={App} />
+      <Route
+        path="/BreweryList/:state"
+        render={routeProps => <App {...routeProps} />}
+      />
       <Route
         path="/BreweryShow/:id"
         render={routeProps => <ShowBrewery {...routeProps} />}

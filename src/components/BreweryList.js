@@ -4,6 +4,7 @@ import ListItem from './ListItem';
 
 class BreweryList extends React.Component {
   render() {
+    console.log(`list of propls ${this.props.brewList[0]}`);
     return (
       <div className="fullList list-item">
         {this.props.brewList.map(brewer => (

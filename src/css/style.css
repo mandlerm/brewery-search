@@ -33,16 +33,11 @@
 /*  BREWERY DISPLAY */
 
 .displayBrewery {
-  /* margin: auto;
-  justify-content: space-evenly;
-  width: 70%; */
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 50px;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
 }
 
 .displayCard {
