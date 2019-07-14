@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import LocationMap from './LocationMap';
 import NavButton from './NavButton';
 import LocationMap from './LocationMap';
 import '../css/style.css';
@@ -19,7 +17,6 @@ class ShowBrewery extends React.Component {
       longitude,
     } = this.props.location.state.chosen_brewery;
 
-    console.log(latitude, longitude);
     return (
       <div className="breweryPage">
         <NavButton
