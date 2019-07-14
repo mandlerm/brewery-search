@@ -43,7 +43,9 @@ class ListItem extends React.Component {
           <div className="item">
             <i className="linkify icon"></i>
             <div className="content">
-              <a href={website_url}>{website_url}</a>
+              <a href={website_url} target="_blank">
+                {website_url}
+              </a>
             </div>
           </div>
         </div>
