@@ -6,7 +6,7 @@ import '../css/style.css';
 
 const ShowBrewery = props => (
   <div className="brewery">
-    <Link to="/">Back to listing</Link>
+    <NavButton />
     <h2>Name of Brewery</h2>
     <p>Address</p>
     <p>Map location</p>
