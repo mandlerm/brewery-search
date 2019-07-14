@@ -2,8 +2,9 @@ import React from 'react';
 import '../css/style.css';
 
 class BreweryList extends React.Component {
-  onClickBrewer = e => {
-    console.log(this);
+  onClickBrewer = id => {
+    console.log(`logging${id}`);
+    console.log(id);
   };
 
   render() {
@@ -18,7 +19,11 @@ class BreweryList extends React.Component {
         postal_code,
         website_url,
       }) => (
-        <span className="list-item" key={id}>
+        <span
+          onClick={() => this.onClickBrewer({ id })}
+          className="list-item"
+          key={id}
+        >
           <div className="ui list raised segment">
             <div className="item">
               <div className="content">
@@ -47,8 +52,8 @@ class BreweryList extends React.Component {
             </div>
 
             <button
+              onClick={this.onClickBrewer.bind(this, { id })}
               type="button"
-              onClick={this.onClickBrewer}
               className="ui right labeled icon button more"
             >
               <i className="right arrow icon"></i>
