@@ -1,13 +1,17 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import NavButton from './NavButton';
 import LocationMap from './LocationMap';
 import '../css/style.css';
 
 class ShowBrewery extends React.Component {
+  componentWillUnmount() {
+    console.log('unmounting');
+  }
+
   render() {
     const {
       name,
-      brewery_type,
       street,
       city,
       state,
@@ -62,4 +66,4 @@ class ShowBrewery extends React.Component {
   }
 }
 
-export default ShowBrewery;
+export default withRouter(ShowBrewery);

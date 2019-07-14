@@ -7,10 +7,24 @@ import '../css/style.css';
 import BreweryList from './BreweryList';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log('constructor');
+  }
+
   state = {
     brewery_listings: [],
     chosen_brewery: {},
   };
+
+  componentDidUpdate() {
+    console.log('update');
+    console.log(this.state);
+  }
+
+  componentDidMount() {
+    console.log('mounted in app');
+  }
 
   onSearchSubmit = async location => {
     console.log(location);
