@@ -4,14 +4,16 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import App from './App';
 import ShowBrewery from './ShowBrewery';
 import Error from './Error';
-import BreweryList from './BreweryList';
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/BreweryList/:state" component={App} />
-      <Route path="/BreweryShow/:id" component={ShowBrewery} />
+      <Route
+        path="/BreweryShow/:id"
+        render={routeProps => <ShowBrewery {...routeProps} />}
+      />
       <Route component={Error} />
     </Switch>
   </BrowserRouter>

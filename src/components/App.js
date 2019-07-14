@@ -7,7 +7,10 @@ import '../css/style.css';
 import BreweryList from './BreweryList';
 
 class App extends React.Component {
-  state = { brewery_listings: [] };
+  state = {
+    brewery_listings: [],
+    chosen_brewery: {},
+  };
 
   onSearchSubmit = async location => {
     const response = await axios.get(
@@ -17,7 +20,6 @@ class App extends React.Component {
       }
     );
     this.setState({ brewery_listings: response.data });
-    console.log(this.state);
     this.props.history.push(`/BreweryList/${location}`);
   };
 
@@ -26,7 +28,12 @@ class App extends React.Component {
       return b.id === id.id;
     });
 
-    this.props.history.push(`/BreweryShow/${listItem.name}`);
+    this.setState({ chosen_brewery: { listItem } });
+
+    this.props.history.push({
+      pathname: `/BreweryShow/${listItem.name}`,
+      state: { chosen_brewery: listItem },
+    });
   };
 
   render() {
