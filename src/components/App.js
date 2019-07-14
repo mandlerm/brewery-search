@@ -21,6 +21,14 @@ class App extends React.Component {
     this.props.history.push(`/BreweryList/${location}`);
   };
 
+  onClickBrewer = id => {
+    const listItem = this.state.brewery_listings.find(function(b) {
+      return b.id === id.id;
+    });
+
+    this.props.history.push(`/BreweryShow/${listItem.name}`);
+  };
+
   render() {
     return (
       <div>
@@ -29,7 +37,10 @@ class App extends React.Component {
           button_message="Show me some breweries!"
           onSubmit={this.onSearchSubmit}
         />
-        <BreweryList brewList={this.state.brewery_listings} />
+        <BreweryList
+          brewList={this.state.brewery_listings}
+          onBreweryPick={this.onClickBrewer}
+        />
       </div>
     );
   }
