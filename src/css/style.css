@@ -36,6 +36,25 @@
   /* background-color: gainsboro; */
 }
 
+.brewery-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.brewery-list span {
+  width: 100%;
+  height: 100%;
+}
+
+.button.more {
+  margin: 10px 25px;
+  background-color: lightskyblue;
+}
+.more {
+  margin-left: 20px;
+}
+
 .tab-left {
   margin-left: 23px;
 }
