@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/style.css';
 
-const Brewery = props => (
+const ShowBrewery = props => (
   <div className="brewery">
     <h2>Name of Brewery</h2>
     <p>Address</p>
@@ -9,4 +9,4 @@ const Brewery = props => (
   </div>
 );
 
-export default Brewery;
+export default ShowBrewery;
