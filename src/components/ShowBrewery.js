@@ -26,15 +26,32 @@ class ShowBrewery extends React.Component {
           className="nav i arrow alternate circle left outline icon"
           location={state}
         />
-        <div className="displayBrewery">
-          {' '}
-          <div className="wrapper ui raised segment">
-            <h1>{name}</h1>
-            <p>{brewery_type}</p>
-            <a href={website_url} target="_blank">
-              {website_url}
-            </a>
+        <h1 className="heading">See the details</h1>
+
+        <div className="ui raised list segment record ">
+          <div className="item">
+            <div className="content">
+              <h1>{name}</h1>
+            </div>
           </div>
+
+          <div className="item">
+            <i className="marker icon"></i>
+            <div className="content">{street}</div>
+            <div className="content tab-left">
+              {city}, {state} {postal_code}
+            </div>
+          </div>
+
+          <div className="item">
+            <i className="linkify icon"></i>
+            <div className="content">
+              <a href={website_url} target="_blank">
+                {website_url}
+              </a>
+            </div>
+          </div>
+
           <div className="map">
             <LocationMap lat={latitude} lon={longitude} />
           </div>
