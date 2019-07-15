@@ -9,7 +9,7 @@ import BreweryList from './BreweryList';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log('constructor');
+    console.log(`app constructor ${this.props.fullList}`);
   }
 
   state = {
@@ -17,17 +17,7 @@ class App extends React.Component {
     chosen_brewery: {},
   };
 
-  componentDidUpdate() {
-    console.log('update');
-    console.log(this.state);
-  }
-
-  componentDidMount() {
-    console.log('mounted in app');
-  }
-
   onSearchSubmit = async location => {
-    console.log(location);
     const response = await axios.get(
       `https://api.openbrewerydb.org/breweries`,
       {
@@ -47,7 +37,10 @@ class App extends React.Component {
 
     this.props.history.push({
       pathname: `/BreweryShow/${listItem.name}`,
-      state: { chosen_brewery: listItem },
+      state: {
+        chosen_brewery: listItem,
+        fullList: this.state.brewery_listings,
+      },
     });
   };
 

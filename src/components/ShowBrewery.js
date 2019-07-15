@@ -5,10 +5,6 @@ import LocationMap from './LocationMap';
 import '../css/style.css';
 
 class ShowBrewery extends React.Component {
-  componentWillUnmount() {
-    console.log('unmounting');
-  }
-
   render() {
     const {
       name,
@@ -21,11 +17,14 @@ class ShowBrewery extends React.Component {
       longitude,
     } = this.props.location.state.chosen_brewery;
 
+    const { fullList } = this.props.location.state;
+
     return (
       <div className="breweryPage">
         <NavButton
           className="nav i arrow alternate circle left outline icon"
           location={state}
+          listOfBrews={fullList}
         />
         <h1 className="heading">See the details</h1>
 
@@ -59,7 +58,7 @@ class ShowBrewery extends React.Component {
           </div>
         </div>
         <div className="map">
-          <LocationMap lat={latitude} lon={longitude} />
+          {/* <LocationMap lat={latitude} lon={longitude} /> */}
         </div>
       </div>
     );

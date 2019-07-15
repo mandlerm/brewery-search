@@ -3,10 +3,6 @@ import '../css/style.css';
 import ListItem from './ListItem';
 
 class BreweryList extends React.Component {
-  componentDidMount() {
-    console.log('list view mounted')
-  }
-
   render() {
     // console.log(`list of propls ${this.props}`);
     return (

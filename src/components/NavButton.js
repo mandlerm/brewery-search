@@ -2,16 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/style.css';
 
-const NavButton = props => {
-  const url = `/BreweryList/${props.location}`;
+class NavButton extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+  }
 
-  return (
-    <Link to={url}>
-      <div className="nav i arrow alternate circle left outline icon">
-        Back to listings
-      </div>
-    </Link>
-  );
-};
+  render() {
+    const url = `/BreweryList/${this.props.location}`;
+
+    return (
+      <Link to={url}>
+        <div className="nav i arrow alternate circle left outline icon">
+          Back to listings
+        </div>
+      </Link>
+    );
+  }
+}
 
 export default NavButton;
