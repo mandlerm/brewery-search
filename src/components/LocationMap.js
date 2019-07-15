@@ -17,7 +17,7 @@ class LocationMap extends React.Component {
         Come visit us!
         <Map
           google={this.props.google}
-          zoom={15}
+          zoom={16}
           style={style}
           initialCenter={{
             lat: latInt,
