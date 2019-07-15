@@ -1,13 +1,34 @@
 import React from 'react';
 import '../css/style.css';
+import axios from 'axios';
 import ListItem from './ListItem';
 
 class BreweryList extends React.Component {
+  async componentWillMount() {
+    const response = await axios.get(
+      `https://api.openbrewerydb.org/breweries`,
+      {
+        params: { by_city: 'birmingham' },
+      }
+    );
+    this.setState({ cityData: response.data });
+    console.log('state set');
+  }
+
+  state = {
+    cityData: [],
+  };
+
   render() {
-    // console.log(`list of propls ${this.props}`);
+    let list = [];
+
+    this.props.brewList.length > 0
+      ? (list = this.props.brewList)
+      : (list = this.state.cityData);
+    console.log(list);
     return (
       <div className="fullList list-item">
-        {this.props.brewList.map(brewer => (
+        {list.map(brewer => (
           <ListItem
             key={brewer.id}
             brew={brewer}
@@ -20,3 +41,15 @@ class BreweryList extends React.Component {
 }
 
 export default BreweryList;
+
+// async () => {
+//   const response = await axios.get(
+//     `https://api.openbrewerydb.org/breweries`,
+//     {
+//       params: { by_city: location },
+//     }
+//   );
+
+//   this.setState({ brewery_listings: response.data });
+// };
+// }

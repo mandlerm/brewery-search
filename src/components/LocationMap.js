@@ -16,7 +16,7 @@ class LocationMap extends React.Component {
         Come visit us!
         <Map
           google={this.props.google}
-          zoom={7}
+          zoom={10}
           style={style}
           initialCenter={{
             lat: latInt,
@@ -28,7 +28,7 @@ class LocationMap extends React.Component {
   }
 }
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAH8240UE283tYzYe1zr9MXNZs-Vw57jtk',
+  apiKey: 'AIzaSyBWtfYgs6LxA3jzodaY-dbcDnFXYVa2w1k',
   version: 3.37,
 })(LocationMap);
 // AIzaSyAH8240UE283tYzYe1zr9MXNZs-Vw57jtk

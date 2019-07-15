@@ -4,7 +4,6 @@ import '../css/style.css';
 
 class NavButton extends React.Component {
   render() {
-    console.log(this.props.loc);
     const url = `/BreweryList/${this.props.loc}`;
 
     return (

@@ -12,6 +12,13 @@ class App extends React.Component {
     chosen_brewery: {},
   };
 
+  componentWillMount(props) {
+    const fullList = this.props.location.data;
+    if (fullList !== undefined) {
+      this.setState({ brewery_listings: fullList.list });
+    }
+  }
+
   onSearchSubmit = async location => {
     const response = await axios.get(
       `https://api.openbrewerydb.org/breweries`,
@@ -38,15 +45,6 @@ class App extends React.Component {
       },
     });
   };
-
-  componentWillMount(props) {
-    const fullList = this.props.location.data;
-    if (fullList !== undefined) {
-      console.log(fullList.list);
-
-      this.setState({ brewery_listings: fullList.list });
-    }
-  }
 
   render() {
     return (
