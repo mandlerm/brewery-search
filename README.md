@@ -10,6 +10,24 @@ To run program:
 
 clone repo and run `npm start` in console.
 
+# REQUIREMENTS
+
+[ X ] A component that displays a list of breweries in a US city of my choice
+[ X ] name
+[ X ] type
+[ X ] full address
+[ X ] web url that is clickable
+[ X ] Data pulled from API (Axios)
+
+[ X ] A component that displayed the details of a single brewery
+[ X ] name
+[ X ] full address
+[ X ] map showing location (Google Map React)
+
+[ X ] App navigatable (React Router)
+
+[ X ] Basic styling (Semantic UI)
+
 # DESIGN CHOICES:
 
 Styling: I have only 2 css files, one for the ListItems, and a main css file for all other components. This app has minimal styling. I broke out the ListItems, but other than that a single source seemed preferred over a sparse style sheet for each component. If app grew, I might break out styling into a separate .css file for each component.
