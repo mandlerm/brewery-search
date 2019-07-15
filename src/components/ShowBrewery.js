@@ -18,7 +18,7 @@ class ShowBrewery extends React.Component {
     } = this.props.location.state.chosen_brewery;
 
     const { fullList } = this.props.location.state;
-
+    console.log(latitude, longitude);
     return (
       <div className="breweryPage">
         <NavButton
@@ -58,7 +58,7 @@ class ShowBrewery extends React.Component {
           </div>
         </div>
         <div className="map">
-          {/* <LocationMap lat={latitude} lon={longitude} /> */}
+          <LocationMap lat={latitude} lon={longitude} />
         </div>
       </div>
     );

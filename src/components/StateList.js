@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/style.css';
 import axios from 'axios';
-import ListItem from './ListItem';
 
 class StateList extends React.Component {
   async componentWillMount() {
@@ -12,7 +11,6 @@ class StateList extends React.Component {
       }
     );
     this.setState({ brewery_listings: response.data });
-    console.log('state set');
   }
 
   state = {
@@ -20,7 +18,7 @@ class StateList extends React.Component {
   };
 
   render() {
-    return <div className="fullList list-item">bham listing</div>;
+    return <div className="fullList list-item"></div>;
   }
 }
 

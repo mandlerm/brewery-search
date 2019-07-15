@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/style.css';
-import axios from 'axios';
 import ListItem from './ListItem';
 
 class BreweryList extends React.Component {
@@ -20,15 +19,3 @@ class BreweryList extends React.Component {
 }
 
 export default BreweryList;
-
-// async () => {
-//   const response = await axios.get(
-//     `https://api.openbrewerydb.org/breweries`,
-//     {
-//       params: { by_city: location },
-//     }
-//   );
-
-//   this.setState({ brewery_listings: response.data });
-// };
-// }

@@ -8,7 +8,9 @@ class Welcome extends React.Component {
         <h1>
           Welcome to the Brewery Finder <i className="beer big icon"></i>
         </h1>
-        <p>Select a state to see the breweries near you!</p>
+        <p>
+          Browse Birmingham, AL or select a state to see the breweries near you!
+        </p>
       </div>
     );
   }
