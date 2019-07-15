@@ -5,18 +5,29 @@ import Welcome from './Welcome';
 import SearchBar from './SearchBar';
 import '../css/style.css';
 import BreweryList from './BreweryList';
+import StateList from './StateList';
 
 class App extends React.Component {
   state = {
     brewery_listings: [],
     chosen_brewery: {},
+    state_listings: [],
   };
 
-  componentWillMount(props) {
+  async componentWillMount(props) {
     const fullList = this.props.location.data;
     if (fullList !== undefined) {
       this.setState({ brewery_listings: fullList.list });
     }
+
+    const response = await axios.get(
+      `https://api.openbrewerydb.org/breweries`,
+      {
+        params: { by_city: 'birmingham' },
+      }
+    );
+    this.setState({ brewery_listings: response.data });
+    console.log('state set');
   }
 
   onSearchSubmit = async location => {
@@ -54,10 +65,14 @@ class App extends React.Component {
           button_message="Show me some breweries!"
           onSubmit={this.onSearchSubmit}
         />
-        <BreweryList
-          brewList={this.state.brewery_listings}
-          onBreweryPick={this.onClickBrewer}
-        />
+        {this.state.brewery_listings.length > 0 ? (
+          <BreweryList
+            brewList={this.state.brewery_listings}
+            onBreweryPick={this.onClickBrewer}
+          />
+        ) : (
+          <StateList brewList={this.state.state_listings} />
+        )}
       </div>
     );
   }
