@@ -23,7 +23,7 @@ class ShowBrewery extends React.Component {
       <div className="breweryPage">
         <NavButton
           className="nav i arrow alternate circle left outline icon"
-          location={state}
+          loc={state}
           listOfBrews={fullList}
         />
         <h1 className="heading">See the details</h1>

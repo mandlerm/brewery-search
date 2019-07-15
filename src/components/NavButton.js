@@ -1,24 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import '../css/style.css';
 
 class NavButton extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
-    const url = `/BreweryList/${this.props.location}`;
+    console.log(this.props.loc);
+    const url = `/BreweryList/${this.props.loc}`;
 
     return (
-      <Link to={url}>
-        <div className="nav i arrow alternate circle left outline icon">
-          Back to listings
-        </div>
-      </Link>
+      <div className="nav">
+        <i className="arrow alternate circle left outline icon" />
+        <Link to={url}>Back to listings</Link>
+      </div>
     );
   }
 }
 
-export default NavButton;
+export default withRouter(NavButton);

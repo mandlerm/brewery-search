@@ -9,7 +9,8 @@ import BreweryList from './BreweryList';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log(`app constructor ${this.props.fullList}`);
+    console.log('app constructor');
+    console.log(props);
   }
 
   state = {
