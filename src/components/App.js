@@ -7,12 +7,6 @@ import '../css/style.css';
 import BreweryList from './BreweryList';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log('app constructor');
-    console.log(props);
-  }
-
   state = {
     brewery_listings: [],
     chosen_brewery: {},
@@ -44,6 +38,15 @@ class App extends React.Component {
       },
     });
   };
+
+  componentWillMount(props) {
+    const fullList = this.props.location.data;
+    if (fullList !== undefined) {
+      console.log(fullList.list);
+
+      this.setState({ brewery_listings: fullList.list });
+    }
+  }
 
   render() {
     return (

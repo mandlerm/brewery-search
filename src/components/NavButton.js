@@ -10,7 +10,16 @@ class NavButton extends React.Component {
     return (
       <div className="nav">
         <i className="arrow alternate circle left outline icon" />
-        <Link to={url}>Back to listings</Link>
+        <Link
+          to={{
+            pathname: url,
+            data: {
+              list: this.props.listOfBrews,
+            },
+          }}
+        >
+          Back to listings
+        </Link>
       </div>
     );
   }
