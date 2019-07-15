@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 import '../css/style.css';
 import BreweryList from './BreweryList';
 import StateList from './StateList';
+import { slugify } from '../helpers';
 
 class App extends React.Component {
   state = {
@@ -27,7 +28,6 @@ class App extends React.Component {
       }
     );
     this.setState({ brewery_listings: response.data });
-    console.log('state set');
   }
 
   onSearchSubmit = async location => {
@@ -37,8 +37,11 @@ class App extends React.Component {
         params: { by_state: location },
       }
     );
+
     this.setState({ brewery_listings: response.data });
-    this.props.history.push(`/BreweryList/${location}`);
+    const slug = slugify(location);
+
+    this.props.history.push(`/BreweryList/${slug}`);
   };
 
   onClickBrewer = id => {
@@ -47,9 +50,9 @@ class App extends React.Component {
     });
 
     this.setState({ chosen_brewery: { listItem } });
-
+    const slug = slugify(listItem.name);
     this.props.history.push({
-      pathname: `/BreweryShow/${listItem.name}`,
+      pathname: `/BreweryShow/${slug}`,
       state: {
         chosen_brewery: listItem,
         fullList: this.state.brewery_listings,

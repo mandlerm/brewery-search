@@ -58,7 +58,7 @@ class ShowBrewery extends React.Component {
           </div>
         </div>
         <div className="map">
-          <LocationMap lat={latitude} lon={longitude} />
+          {/* <LocationMap lat={latitude} lon={longitude} /> */}
         </div>
       </div>
     );
