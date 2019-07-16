@@ -1,3 +1,4 @@
+// Appears on Brewery Show to enable user to navigate back to full search results
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { slugify } from '../helpers';

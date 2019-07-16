@@ -1,3 +1,5 @@
+// Format brewery data for the full list of brewery items
+
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import NavButton from './NavButton';

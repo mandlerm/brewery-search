@@ -1,3 +1,5 @@
+// Formats brewery information for the list of results
+
 import React from 'react';
 
 import '../css/listItem.css';
@@ -29,13 +31,13 @@ class ListItem extends React.Component {
 
           <div className="item">
             <i className="info circle icon"></i>
-            <div className="content">Type: {brewery_type}</div>
+            <div className="content type">Type: {brewery_type}</div>
           </div>
 
           <div className="item">
-            <i className="marker icon"></i>
-            <div className="content">{street}</div>
-            <div className="content tab-left">
+            <i className="marker address icon"></i>
+            <div className="content address">{street}</div>
+            <div className="content address tab-left">
               {city}, {state} {postal_code}
             </div>
           </div>
@@ -43,7 +45,12 @@ class ListItem extends React.Component {
           <div className="item">
             <i className="linkify icon"></i>
             <div className="content">
-              <a href={website_url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={website_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="url"
+              >
                 {website_url}
               </a>
             </div>

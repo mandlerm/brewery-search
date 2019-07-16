@@ -1,3 +1,4 @@
+// returns map with center at the coordinates retrieved from the latitude and longitude passed in from the brewery selected
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 

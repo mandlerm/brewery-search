@@ -1,12 +1,14 @@
-/* APP COMPONENT */
-
 /* WELCOME COMPONENT */
 
 .welcome {
   text-align: center;
   margin-top: 10px;
+  font-size: 2em;
 }
 
+.welcome h1 {
+  font-size: 2em;
+}
 .beer {
   color: brown;
 }
@@ -20,33 +22,45 @@
   margin-bottom: 20px;
 }
 
+.searchBar {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
 .search.ui.container button {
+  display: flex;
   margin-top: 10px;
-  /* display: flex; */
+  justify-content: center;
+  font-size: 2em;
 }
 
+.search.ui.container select {
+  font-size: 1.25em;
+  height: 70px;
+}
 .form {
   display: flex;
   align-self: center;
+  justify-content: center;
 }
 
 /*  BREWERY DISPLAY */
-
-.displayCard {
-  /* background-color: lightgray; */
-}
 
 .card {
   display: flex;
   justify-content: center;
 }
+
+.list-item {
+  justify-content: center;
+}
 .raised.list.record {
   display: flex;
-  /* justify-content: left; */
   margin-top: 20px;
   margin-bottom: 20px;
   align-items: center;
   text-align: center;
+  justify-content: center;
   background-color: salmon;
   color: darkslateblue;
   width: 75%;
@@ -68,7 +82,6 @@
   justify-content: right;
   flex-flow: column;
   margin-left: 20px;
-  /* text-align: center; */
 }
 
 .heading {

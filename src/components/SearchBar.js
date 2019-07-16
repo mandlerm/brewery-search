@@ -1,3 +1,5 @@
+// Search bar with dropdown select for states.
+
 import React from 'react';
 import '../css/style.css';
 

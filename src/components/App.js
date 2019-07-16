@@ -1,3 +1,5 @@
+// Main app component.  Handles API call for state selected.
+
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import axios from 'axios';

@@ -1,4 +1,4 @@
-// Formats each brewery listing
+// Maps through the json list of breweries and displays formatted listings
 
 import React from 'react';
 import '../css/style.css';

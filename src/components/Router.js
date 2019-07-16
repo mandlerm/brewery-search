@@ -1,3 +1,5 @@
+// Router using React Router
+
 import React from 'react';
 import '../css/style.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -9,7 +11,6 @@ const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
-      {/* <Route exact path="/BreweryList/:state" component={App} /> */}
       <Route
         path="/BreweryList/:state"
         render={routeProps => <App {...routeProps} />}

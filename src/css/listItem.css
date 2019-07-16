@@ -5,12 +5,11 @@
 }
 
 .list-item span {
-  width: 100%;
+  width: 150%;
   height: 100%;
   margin: 10px;
-  margin-left: 30px;
+  margin-left: 100px;
   padding-top: 10px;
-  /* justify-content: center; */
 }
 
 .content {
@@ -21,10 +20,22 @@
   margin-left: 23px;
 }
 
-.fullList {
-  /* justify-content: left; */
-}
-
 .list.raised {
   background-color: palegoldenrod;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.type {
+  font-size: 1.5em;
+}
+
+.address {
+  font-size: 1.2em;
+}
+
+.url {
+  font-size: 1.2em;
 }
