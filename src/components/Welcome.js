@@ -1,3 +1,5 @@
+// Displays welcome header and use instructions
+
 import React from 'react';
 import '../css/style.css';
 

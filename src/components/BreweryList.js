@@ -1,3 +1,5 @@
+// Formats each brewery listing
+
 import React from 'react';
 import '../css/style.css';
 import ListItem from './ListItem';

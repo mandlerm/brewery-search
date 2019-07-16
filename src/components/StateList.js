@@ -1,3 +1,5 @@
+// API call to retrieve default city
+
 import React from 'react';
 import '../css/style.css';
 import axios from 'axios';
